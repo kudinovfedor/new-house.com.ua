@@ -1,0 +1,194 @@
+/* ====================  TYPOGRAPHY  ==================== */
+
+// Headings
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: $headings-color;
+  font-family: $headings-font-family;
+  font-weight: $headings-font-weight;
+  line-height: $headings-line-height;
+  margin-top: 0;
+  margin-bottom: $headings-margin-bottom;
+}
+
+@include responsive-headers;
+
+// Text elements
+
+p {
+  margin-top: 0;
+  margin-bottom: $base-margin;
+}
+
+small {}
+
+a {
+  color: $link-color;
+  text-decoration: $link-decoration;
+
+  &:link {}
+
+  &:visited {}
+
+  &:hover {
+    color: $link-hover-color;
+    text-decoration: $link-hover-decoration;
+  }
+
+  &:active {}
+
+  &:focus {}
+
+  &:empty {
+    &:before {
+      content: attr(href);
+    }
+  }
+
+  //&[href^="http"] {
+  //  cursor: alias;
+  //}
+}
+
+b,
+strong {
+  font-weight: bold;
+}
+
+i,
+em {
+  font-style: italic;
+}
+
+blockquote {
+  padding: 0 0 0 15px;
+  margin: 0 0 $base-margin;
+  border-left: 5px solid #eee;
+}
+
+abbr,
+acronym {
+  cursor: help;
+  border-bottom: 1px dotted #999;
+}
+
+address {
+  margin: 0 0 $base-margin;
+  font-style: normal;
+}
+
+hr {
+  margin: 20px 0;
+  border: 0;
+  border-bottom: 1px solid #808080;
+}
+
+// Lists
+
+ul,
+ol {
+  margin: 0 0 $base-margin;
+  padding-left: 25px;
+
+  ul,
+  ol {
+    margin-bottom: 0;
+  }
+
+  li {
+    list-style-position: outside;
+  }
+
+  a {
+    color: inherit;
+  }
+}
+
+dl {
+  margin: 0 0 $base-margin;
+}
+
+dt {
+  font-weight: bold;
+}
+
+dd {
+  margin-left: $base-margin;
+}
+
+// Tables
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  max-width: 100%;
+  background-color: transparent;
+  margin-bottom: $base-margin;
+}
+
+caption {
+  caption-side: top;
+  font-weight: bold;
+  text-align: center;
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  border-bottom: 0;
+  font-size: 130%;
+}
+
+th {
+  font-weight: bold;
+}
+
+th,
+td {
+  border: 1px solid #ccc;
+  padding: 5px 10px;
+  text-align: left;
+  vertical-align: middle;
+}
+
+thead {}
+
+tbody {}
+
+tfoot {}
+
+// Img, Video, Object, Embed
+
+img,
+video,
+object,
+embed {
+  max-width: 100%;
+}
+
+img,
+video {
+  height: auto;
+  vertical-align: middle;
+}
+
+img {
+  text-align: center;
+
+  &:after {
+    display: block;
+    content: "(url: " attr(src) ")";
+    padding: 2px 5px;
+    background-color: #eee;
+    text-align: center;
+    font-size: 12px;
+    min-width: 100px;
+    white-space: pre-line;
+    word-break: break-all;
+  }
+}
+
+/* ====================  END TYPOGRAPHY  ==================== */

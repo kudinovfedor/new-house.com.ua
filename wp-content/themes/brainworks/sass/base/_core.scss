@@ -1,0 +1,57 @@
+/* ====================  CORE  ======================= */
+@include selection {
+  background-color: #338fff;
+  color: #fff;
+  text-shadow: none;
+}
+
+html {
+  height: 100%;
+  font-family: sans-serif;
+  font-size: 100%;
+  @include box-sizing(border-box);
+}
+
+* {
+  &,
+  &:before,
+  &:after {
+    @include box-sizing(inherit);
+  }
+}
+
+body {
+  position: relative;
+  min-height: 100%;
+  min-width: 320px;
+  margin: 0;
+  background-color: $body-bg;
+  font: normal #{$fk-base-font-size}/#{$fk-base-line-height} $fk-base-font-family;
+  color: $body-color;
+  overflow-x: hidden;
+  @if ($scroll-behavior) {
+    scroll-behavior: smooth;
+  }
+  text-rendering: optimizeLegibility;
+  @if ($font-smoothing) {
+    @include font-smoothing(antialiased);
+  }
+}
+
+a,
+area,
+button,
+[role="button"],
+input,
+label,
+select,
+summary,
+textarea {
+  @include touch-action(manipulation);
+}
+
+svg {
+  @include transition(fill .3s ease-out);
+}
+
+/* ====================  END CORE  ======================= */

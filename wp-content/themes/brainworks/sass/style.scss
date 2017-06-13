@@ -1,0 +1,60 @@
+@charset "UTF-8";
+/*
+Theme Name: brainworks
+Theme URI:
+Text Domain: brainworks
+Author: Yegor Mamay
+Author URI: http://brainworks.com.ua
+Description:
+License:
+License URI:
+Version: 3.2
+Tags: one-column, two-columns, full-width-template, e-commerce
+*/
+
+@import "utilities/variables";
+@import "utilities/mixins";
+@import "utilities/functions";
+
+@import "base/normalize-v6";
+@import "base/custom-normalize"; // [Optional FK]
+@import "base/fonts";
+@import "base/core";
+@import "base/typography";
+
+@import "utilities/placeholders";
+
+@import "layout/header";
+@import "layout/nav";
+@import "layout/main";
+@import "layout/sidebar";
+@import "layout/footer";
+@import "layout/forms";
+
+@import "module/gulp-sprite"; // [Optional]
+//@import "module/custom_checkbox_radio"; // [Optional]
+//@import "layout/grid"; // [Optional]
+@import "module/buttons"; // [Optional]
+//@import "module/tabs"; // [Optional]
+//@import "module/fk-number"; // [Optional]
+//@import "module/accordion"; // [Optional]
+//@import "module/breadcrumbs"; // [Optional]
+//@import "module/pagination"; // [Optional]
+@import "module/helpers"; // [Optional]
+//@import "module/preloader"; // [Optional]
+//@import "module/rating"; // [Optional]
+
+@import "page/home";
+@import "page/category";
+@import "page/product";
+//@import "page/review";
+@import "page/blog";
+//@import "page/cart";
+//@import "page/checkout";
+@import "page/contact";
+
+//@import "module/modernizr"; // [Optional]
+//@import "module/retina"; // [Optional]
+
+@import "state/state";
+@import "state/responsive"; // [Optional]

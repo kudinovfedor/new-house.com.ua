@@ -1,0 +1,120 @@
+/* ====================  HEADER  ==================== */
+.header {
+  @supports (height: 100vh) {
+    height: 100vh;
+  }
+
+  width: 100%;
+  position: relative;
+  background: #222 image-url('header-bg.jpg') no-repeat top center;
+  @include background-size(cover);
+  color: #fff;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    @include linear-gradient(to bottom, rgba(#000, .7) 0%, rgba(#4f4f4f, 0) 100%);
+  }
+
+  &-top,
+  &-middle {
+    position: relative;
+    z-index: 1;
+  }
+
+  &-top {
+    padding: 10px 0;
+    @extend %clearfix;
+    @include flow-root;
+    text-align: center;
+  }
+
+  &-middle {
+    text-transform: uppercase;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    @include transform(translateY(-50%));
+    font-family: $lato-black;
+  }
+
+  &-subtitle {
+    @include responsive-font-size(22px, 36px, 480px, 1280px, 29px);
+  }
+
+  &-title {
+    @include responsive-font-size(34px, 60px, 480px, 1280px, 46px);
+  }
+
+  &-desc {
+    @include responsive-font-size(16px, 24px, 480px, 1280px, 20px);
+  }
+
+  &-bottom { }
+
+  &-logo,
+  &-btn,
+  &-tels {
+    margin-bottom: 5px;
+  }
+
+  &-btn {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 400px;
+  }
+
+  &-tel {
+    display: inline-block;
+    margin: 0 15px 5px;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    @include responsive-font-size(16px, 18px, 480px, 1280px);
+    @include transition(.2s ease-out);
+
+    &:hover {
+      border-color: #fff;
+    }
+  }
+
+}
+
+.logo {
+  display: inline-block;
+  font-family: $lato-black;
+  line-height: 1;
+  white-space: nowrap;
+  letter-spacing: letter-spacing(25, 48);
+  @include responsive-font-size(38px, 48px, 480px, 1280px, 43px);
+  text-decoration: none;
+  text-transform: capitalize;
+}
+
+.scroll-down {
+  cursor: pointer;
+  position: absolute;
+  left: 50%;
+  bottom: 7%;
+  z-index: 1;
+  margin-left: -16px;
+  @include transition(.2s ease-out);
+
+  &:hover {
+    @include opacity(.6);
+  }
+
+  &:active {
+    @include transform(translateY(5px));
+  }
+
+  .svg-icon {
+    fill: #fff;
+  }
+}
+
+/* ====================  END HEADER  ==================== */

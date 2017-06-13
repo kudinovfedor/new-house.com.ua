@@ -1,0 +1,123 @@
+/* ====================  BUTTONS  ==================== */
+%btn {
+  cursor: pointer;
+  display: inline-block;
+  vertical-align: middle;
+  border: 1px solid transparent;
+  outline: 0;
+  padding: 6px 12px;
+  text-align: center;
+  text-decoration: none;
+  text-shadow: none;
+  text-transform: uppercase;
+  white-space: normal;
+  font-weight: normal;
+  color: #000;
+  -webkit-tap-highlight-color: transparent;
+  @include border-radius(0);
+  @include box-shadow(none);
+  @include transition(none);
+  @include touch-action(manipulation);
+  @include user-select(none);
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
+
+  &:active { }
+
+  &::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+  }
+}
+
+.btn {
+  @extend %btn;
+  line-height: $fk-base-line-height;
+  font-family: $lato-light;
+
+  .svg-icon {
+    fill: #fff;
+  }
+
+  &-primary {
+    background-color: $primary-color;
+    color: #fff;
+    padding: 7px 20px;
+    @include responsive-font-size(16px, 24px, 480px, 1280px, 20px);
+    @include transition(.3s ease-in);
+
+    @media only screen and (min-width: 480px) {
+      padding: 7px 40px;
+    }
+
+    &:hover,
+    &:focus {
+      color: #fff;
+      background-color: darken($primary-color, 5%);
+      //@include box-shadow(0 5px 20px 0 rgba(#000, .4));
+      @include box-shadow(-3px 3px 5px 0 rgba(#000, .3));
+    }
+
+    &:active {
+      @include box-shadow(-5px 5px 15px 0 rgba(#000, .3));
+    }
+  }
+
+  &-secondary {
+    background-color: #5a5a5a;
+    color: #fff;
+    padding: 9px 15px;
+    @include responsive-font-size(14px, 24px, 480px, 1280px, 20px);
+    @include transition(.3s ease-in);
+
+    @media only screen and (min-width: 480px) {
+      padding: 9px 40px;
+    }
+
+    &:hover,
+    &:focus {
+      color: #fff;
+      background-color: darken(#5a5a5a, 5%);
+      //@include box-shadow(0 5px 20px 0 rgba(#000, .4));
+      @include box-shadow(-3px 3px 5px 0 rgba(#000, .3));
+    }
+
+    &:active {
+      @include box-shadow(-5px 5px 15px 0 rgba(#000, .3));
+    }
+  }
+
+  &-block {
+    display: block;
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  &-left {
+    text-align: left;
+  }
+
+  &-center {
+    text-align: center;
+  }
+
+  &-right {
+    text-align: right;
+  }
+
+  &-pull {
+    &-left {
+      float: left;
+    }
+
+    &-right {
+      float: right;
+    }
+  }
+}
+
+/* ====================  END BUTTONS  ==================== */

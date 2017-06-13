@@ -1,0 +1,11 @@
+.idea/
+node_modules/
+wp-content/plugins/debug-bar/
+wp-content/plugins/developer/
+wp-content/plugins/log-deprecated-notices/
+wp-content/plugins/theme-check/
+
+wp-content/themes/brainworks/fonts_old/
+wp-content/themes/brainworks/images_old/
+wp-content/themes/brainworks/sass_old/
+wp-content/themes/brainworks/scripts_old/
